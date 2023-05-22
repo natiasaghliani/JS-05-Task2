@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS-05-Task2</title>
+
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <a href="#">
+                LOGO
+            </a>
+
+            <div class="navigation">
+                <ul>
+                    <li>
+                        <a href="#">Desitnations</a>
+                    </li>
+                    <li>
+                        <a href="#">Hotels</a>
+                    </li>
+                    <li> 
+                        <a href="#">Flights</a>
+                    </li>
+                    <li>
+                        <a href="#">Bookings</a>
+                    </li>
+                </ul>
+
+                <div class="button1">
+                    <button id="loginBtn">Login</button>
+                    <button>Sign up</button>
+                </div>
+
+            </div>
+
+            <div class="bar">
+                <i class="fa-solid fa-bars"></i>
+            </div>
+
+        </div>
+    </header>
+
+    <section>
+        <img src="https://www.tailorbrands.com/wp-content/uploads/2020/07/mcdonalds-logo.jpg" alt="MC">
+        <img src="https://www.tailorbrands.com/wp-content/uploads/2020/07/mcdonalds-logo.jpg" alt="MC">
+        <img src="https://www.tailorbrands.com/wp-content/uploads/2020/07/mcdonalds-logo.jpg" alt="MC">
+    </section>
+
+    <div class="modal" id="loginModal">
+        <div class="modal-bg" id="modalBg"></div>
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2>Login</h2>
+            <form action="login" class="form" id="loginForm">
+                <input type="text" id="username" placeholder="Enter your username" required>
+                <input type="password" id="password" placeholder="Enter your password" required>
+
+                <button type="submit" class="login" id="loginTo">Log In</button>
+            </form>
+        </div>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
