@@ -9,31 +9,37 @@ loginBtn.addEventListener('click', function() {
 
 closeBtn.addEventListener('click', function() {
     loginModal.style.display = 'none';
+    resetForm();
 });
 
 modalBg.addEventListener('click', function() {
     loginModal.style.display = 'none';
+    resetForm();
 });
 
 const loginForm = document.getElementById('loginForm');
 const loginTo = document.getElementById('loginTo');
+const usernameInput = document.getElementById('username');
+const passwordInput = document.getElementById('password');
 
-loginForm.addEventListener('submit', function(event) {
+loginTo.addEventListener('click', function(event) {
     event.preventDefault();
+     
+    const username = usernameInput.value.trim();
+    const password = passwordInput.value.trim();
 
-    const username = document.getElementById('username').value;
-    const password = document.getElementById('password').value;
-
-    if (username.value.trim() !== '' && password.value.trim() !== '') {
+    if (username !== '' && password !== '') {
         loginModal.style.display = 'none';
+        resetForm();
+    } else {
+        alert('Please fill in all fields');
     }
-
-    username.value = '';
-    password.value = '';
-    username.focus();
-    password.focus();
 })
 
+function resetForm() {
+    usernameInput.value = '';
+    passwordInput.value = '';
+  }
 
 
 
